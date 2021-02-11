@@ -33,13 +33,13 @@ public class ReportsModulePage extends Page {
 	@FindBy(linkText = "Fee Approved – Online to Offline")
 	private List<WebElement> feeApprovedReportBtn;
 
-	@FindBy(linkText = "Portfolio Extract")
+	@FindBy(xpath = "//*[@id=\"mainnav-menu\"]/li[6]/ul/li[4]/a")
 	private List<WebElement> portFolioReportBtn;
 
-	@FindBy(linkText = "Sage Report")
+	@FindBy(xpath = "//*[@id=\"mainnav-menu\"]/li[6]/ul/li[5]/a")
 	private List<WebElement> sageReportBtn;
 
-	@FindBy(linkText = "Status Report")
+	@FindBy(xpath = "//*[@id=\"mainnav-menu\"]/li[6]/ul/li[6]/a")
 	private List<WebElement> statusReportBtn;
 
 	@FindBy(xpath = "//*[@id=\"mainnav-menu\"]/li[6]/ul/li[7]/a")

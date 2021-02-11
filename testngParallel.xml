@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="parallel TestNG" thread-count="1" parallel="tests">
+	<listeners>
+		<listener
+			class-name="com.cei.listeners.InvokedMethodListener" />
+	</listeners>
+
+	<test name="Chrome thread in parallel execution">
+		<!-- <parameter name="browser" value="local.win.chrome" /> -->
+		<parameter name="browser" value="chrome" />
+		<classes>
+			<class name="com.parallel.testcases.BaseTestcase" />
+			<class name="com.parallel.testcases.LoginCM" />
+			<class name="com.parallel.testcases.OrderManagementModule" />
+			<class name="com.parallel.testcases.QCModule" />
+			<class name="com.parallel.testcases.MasterDataModule" />
+			<class name="com.parallel.testcases.ReportsModule" />
+			<class name="com.parallel.testcases.CMSetupModule" />
+			<class name="com.parallel.testcases.LogoutCM" />
+		</classes>
+	</test>
+
+</suite>
+
+<!-- Browser parameters: windows.app local.win.chrome local.win.firefox local.mac.safari
+	local.mac.chrome remote.mac.safari remote.mac.chrome remote.win.chrome remote.win.firefox
+	android.chrome ios.safari ios.chrome -->

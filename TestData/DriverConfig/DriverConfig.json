@@ -1,0 +1,86 @@
+{
+	"windows.app.driver.config": {
+		"platormName" : "Windows",
+		"deviceName" : "WindowsPC",
+		"app" : "Root",
+		"driverpath": "C:/Program Files (x86)/Windows Application Driver/WinAppDriver.exe"
+	},
+	
+	"local.win.chrome.config": {
+		"driver": "chrome",
+		"_version": "84",
+		"_binaryPath": "some path"
+	},
+	
+	"local.win.firefox.config": {
+		"driver": "firefox",
+		"_version": "84",
+		"_binaryPath": "some path"
+	},
+	
+	"local.mac.safari.config": {
+		"driver": "safari"
+	},
+	
+	"local.mac.chrome.config": {
+		"driver": "chrome",
+		"_version": "84"
+	},
+	
+	"remote.win.chrome.config": {
+		"driver": "chrome",
+		"node": "http://10.6.11.23:5568/wd/hub",
+		"_hub": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"remote.win.firefox.config": {
+		"driver": "firefox",
+		"node": "http://10.6.11.23:5568/wd/hub",
+		"_hub": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"remote.mac.safari.config": {
+		"driver": "safari",
+		"node": "http://10.6.11.23:5568/wd/hub",
+		"_hub": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"remote.mac.chrome.config": {
+		"driver": "chrome",
+		"node": "http://10.6.11.23:5555/wd/hub",
+		"_hub": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"ios.safari.config": {
+		"MobileCapabilityType.PLATFORM_NAME": "iOS",
+		"MobileCapabilityType.PLATFORM_VERSION": "12.1",
+		"MobileCapabilityType.DEVICE_NAME": "iPhone XS",
+		"MobileCapabilityType.UDID": "61C7F518-F64F-468C-895E-CC09A8B542D2",
+		"MobileCapabilityType.AUTOMATION_NAME": "XCUITest",
+		"MobileCapabilityType.BROWSER_NAME": "safari",
+		"newCommandTimeout" : "300",
+		"appiumurl": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"ios.chrome.config": {
+		"MobileCapabilityType.PLATFORM_NAME": "iOS",
+		"MobileCapabilityType.PLATFORM_VERSION": "12.1",
+		"MobileCapabilityType.DEVICE_NAME": "iPhone XS",
+		"MobileCapabilityType.UDID": "61C7F518-F64F-468C-895E-CC09A8B542D2",
+		"MobileCapabilityType.AUTOMATION_NAME": "XCUITest",
+		"MobileCapabilityType.BROWSER_NAME": "chrome",
+		"newCommandTimeout" : "300",
+		"appiumurl": "http://10.81.234.6:4444/:4444/wd/hub"
+	},
+	
+	"android.chrome.config": {
+		"platformName": "Android",
+		"_UDID": "J6AAGF02W709NMK",
+		"browserName": "chrome",
+		"platformVersion": "7.1.2",
+		"deviceName": "emulator-5554",
+		"noReset" : "true",
+		"newCommandTimeout" : "300",
+		"appiumurl": "http://0.0.0.0:4723/wd/hub"
+	}
+}

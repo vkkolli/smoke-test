@@ -35,7 +35,7 @@ public class LoginPage extends Page {
 	private WebElement title;
 
 
-	@FindBy(xpath = "//a[@href=\"https://capitalmarkets-pt.mortgageconnectlp.com/logout\"]")
+	@FindBy(xpath = "//*[@id=\"logout\"]")
 	private WebElement logoutBtn;
 
 
@@ -69,6 +69,7 @@ public class LoginPage extends Page {
 	}
 	public WebDriver logoutAsAgent() {
 		JSClick(driver, elementList("logoutModule", title));
+		callForWait(3000);
 		JSClick(driver, elementList("logoutModule", logoutBtn));
 		return driver;
 

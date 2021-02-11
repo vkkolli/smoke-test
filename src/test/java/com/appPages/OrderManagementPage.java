@@ -30,7 +30,7 @@ public class OrderManagementPage extends Page {
 	@FindBy(linkText = "Reassign Orders")
 	private List<WebElement> reassignOrderseBtn;
 
-	@FindBy(linkText = "Order Status")
+	@FindBy(xpath = "//*[@id=\"mainnav-menu\"]/li[5]/ul/li[4]/a")
 	private List<WebElement> orderStatusBtn;
 
 	@FindBy(linkText = "Set DueDate")
@@ -143,6 +143,7 @@ public class OrderManagementPage extends Page {
 
 		a.moveToElement(test).perform();
 		clickElement(driver, elementList("orderManagementModule", orderManagementBtn));
+		callForWait(5000);
 		JSClick(driver, elementList("orderStatusModule", orderStatusBtn));
 		if (!(orderStatusTitle.isDisplayed())) {
 			BaseReporter.logFail("Order Status Page not opened");
@@ -150,6 +151,7 @@ public class OrderManagementPage extends Page {
 			BaseReporter.logPass("Order Status Page opens");
 			callForWait(5000);
 			enterText(driver, elementList("searchButton", searchTxtbox), "1234");
+			callForWait(5000);
 			String orders = ordersTable.getText();
 			if (orders.contains("Showing 1")) {
 				BaseReporter.logPass("Order results displayed");
